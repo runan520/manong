@@ -28,8 +28,12 @@
 <!--        版本号一定要对应例如：3.1.0就不可以写成3.1-->
 <!--        要与中央仓库的版本号一致-->
         <maven-resources-plugin>3.1.0</maven-resources-plugin>
-        <maven-compiler-plugin>3.8.1</maven-compiler-plugin>
-
+        <maven-compiler-plugin>3.2</maven-compiler-plugin>
+        <mybatis.version>3.5.3</mybatis.version>
+        <mybatis-spring.version>1.2.2</mybatis-spring.version>
+<!--        试了好几个版本都不行，版本越高越好-->
+        <spring.version>5.1.5.RELEASE</spring.version>
+        <druid.version>1.0.18</druid.version>
 
     </properties>
 <!--    定义一些依赖，子模块需要真正依赖的时候，才真正的依赖-->
@@ -44,6 +48,54 @@
 
 
         </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
         </dependencies>
 
 
@@ -59,7 +111,7 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>${maven-resources-plugin}</version>
                 <configuration>
-<!--                    遍历-->
+<!--                   只是拷贝资源，不需要配置 遍历-->
 <!--                    <compilerVersion>1.8</compilerVersion>-->
 <!--                    <source>1.8</source>-->
 <!--                    <target>1.8</target>-->

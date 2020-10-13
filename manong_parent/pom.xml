@@ -24,7 +24,7 @@
     </modules>
 <!--    集中地定义版本号-->
     <properties>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
 <!--        版本号一定要对应例如：3.1.0就不可以写成3.1-->
 <!--        要与中央仓库的版本号一致-->
         <maven-resources-plugin>3.1.0</maven-resources-plugin>
